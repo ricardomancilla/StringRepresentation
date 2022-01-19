@@ -39,10 +39,11 @@ namespace CodeChallenge.Controllers
                 result.Add(item);
             }
 
-            //_repository.Insert(new StringRepresentation {
-            //    Limit = limit,
-            //    RequestDt = DateTime.UtcNow
-            //});
+            _repository.Insert(new StringRepresentation
+            {
+                Limit = limit,
+                RequestDt = DateTime.UtcNow
+            });
 
             return result;
         }

@@ -1,4 +1,4 @@
-﻿using DapperExtensions;
+﻿using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
@@ -19,7 +19,7 @@ namespace CodeChallenge.Data
 
             using var dbConnection = new SqlConnection(connectionString);
             dbConnection.Open();
-            var result = dbConnection.Insert(data);
+            dbConnection.Insert(data);
         }
     }
 }
